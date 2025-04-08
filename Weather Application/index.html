@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" id="city-input">
+            <button onclick="checkWeather()">🔍</button>
+        </div>
+        
+        <div class="loading" id="loading"></div>
+        <div class="error" id="error-message">City not found. Please try again.</div>
+        
+        <div class="weather-container" id="weather-container">
+            <div class="weather-info">
+                <h2 class="city" id="city">New York</h2>
+                <p class="date" id="date">Monday, April 8</p>
+                <img src="" alt="weather icon" class="weather-icon" id="weather-icon">
+                <h1 class="temp" id="temperature">22°C</h1>
+                <h3 class="weather" id="weather-type">Cloudy</h3>
+                <p class="min-max" id="min-max">Min: 19°C | Max: 25°C</p>
+            </div>
+            
+            <div class="details">
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/512/219/219816.png" alt="humidity">
+                    <div>
+                        <p class="humidity">Humidity</p>
+                        <p class="value" id="humidity">65%</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/512/172/172922.png" alt="wind">
+                    <div>
+                        <p class="wind">Wind Speed</p>
+                        <p class="value" id="wind-speed">5.2 km/h</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forecast">
+                <h3>3-Day Forecast</h3>
+                <div class="forecast-cards" id="forecast-container">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
